@@ -120,11 +120,13 @@ Int Fa 0/3
   switchport mode access
   switchport access vlan 100     
 Int Fa 0/5
-  switchport mode access
-  switchport access vlan 100  
+  switchport mode access  
+  switchport voice vlan 100
+  switchport access vlan 1
 Int Fa 0/7
   switchport mode access
-  switchport access vlan 100    
+  switchport voice vlan 100 
+ switchoprt access vlan 1
  end
 
 ip dhcp pool CAMERA6
