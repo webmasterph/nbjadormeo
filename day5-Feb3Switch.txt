@@ -294,6 +294,7 @@ int fa 0/7
 end
 
 TASK11: Multiple instance STP: 802.1s
+Make FORCEs all CPU/Instances work to protect VLANs, cpu0 = is working 
 step1: sync all Vlans with VTP:vlanTrunkingProtocol:
 TAAS/BABA: d1/d2:
 config t
@@ -327,7 +328,7 @@ BABA: sh vlan brief:
 cpu1: vlan 11-19
 cpu2: vlan 21-29
 cpu3: vlan 31-39
-@TAAs/BABA:
+@TAAs/BABA: d1,d2,a1,a2
 CONFIG T
 spanning-tree mode Mst
 spanning-tree mst configuration
