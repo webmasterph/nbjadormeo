@@ -43,24 +43,26 @@ task4: CONFIGURING eigrp FOR ALL switches,cms
        and OSPF for edge cisco,fortinet,palos:
 @cm:
 config t
-router eigrp M
+no router eigrp 100
+router eigrp 100
  no auto-summary
- network 10.m.100.0 0.0.0.255
+ network 10.11.100.0 0.0.0.255
 @CoreBAba:
 config t
 no router eigrp 100
-router eigrp M
+router eigrp 100
  no auto-summary
- network 10.m.100.0 0.0.0.255
- network 10.m.50.0 0.0.0.255
- network 10.m.10.0 0.0.0.255
- network 10.m.1.0 0.0.0.255
- network 10.m.m.0 0.0.0.255
+ network 10.11.100.0 0.0.0.255
+ network 10.11.50.0 0.0.0.255
+ network 10.11.10.0 0.0.0.255
+ network 10.11.1.0 0.0.0.255
+ network 10.11.11.0 0.0.0.255
 @eDGE:
 config t
-router eigrp M
+router eigrp 100
  no auto-summary
- network 10.m.m.0 0.0.0.255
+ network 10.11.11.0 0.0.0.255
+ network 200.0.0.0 0.0.0.255
 
 how to eigrp if eigrp is working CORRECTLY?
 show ip eigrp neighbor
