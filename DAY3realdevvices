@@ -87,9 +87,9 @@ show ip route eigrp
 
 @eDGE: both eigrp(internal) and ospf(external):
 router ospf 1
-router-id m.0.0.1
+router-id 11.0.0.1
 network 200.0.0.0 0.0.0.255 area 0
-network m.0.0.1 0.0.0.0 area 0
+network 11.0.0.1 0.0.0.0 area 0
 end
 
 EDGE12#sh ip route ospf
@@ -137,8 +137,8 @@ k5 MTU = 1500
 #EDGE:
 config t
 router ospf 1
- redistribute eigrp M subnets
-router eigrp M
+ redistribute eigrp 100 subnets
+router eigrp 100
  redistribute ospf 1 Metric 1000000 1 255 1 1500
 end
 
