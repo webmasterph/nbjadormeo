@@ -1,4 +1,43 @@
+TROUBLESHOOTING AND DIAGNOSTIC FOR NETWORK ENGINEERS
+EXPERIENCE >>> CERTIFIED, lethal = XP = Certified + Englishero = 3thresome
 CONFIGURING OSPF AND EIGRP IN REAL WORLD DEVICES, NOT VIRTUAL
+ping 10.10.11.1.10    cable unplugged, wrong IP, Duplicate: 169.254.x.x
+ping 10.10.11.1.10 
+
+ping 10.
+
+
+
+ping 200.0.0.11 NO routing c
+
+
+
+
+
+
+
+Static Routing @COREbaba:
+config t
+ip route 0.0.0.0 0.0.0.0 10.11.11.1 1
+
+
+config t
+!ip route 10.11.0.0 255.255.0.0 10.11.11.4
+ip route 10.12.0.0 255.255.0.0 200.0.0.12
+ip route 10.21.0.0 255.255.0.0 200.0.0.21
+ip route 10.22.0.0 255.255.0.0 200.0.0.22
+ip route 10.31.0.0 255.255.0.0 200.0.0.31
+ip route 10.32.0.0 255.255.0.0 200.0.0.32
+ip route 10.41.0.0 255.255.0.0 200.0.0.41
+
+
+Static Routing @CUCM:
+config t
+ip route 0.0.0.0 0.0.0.0 10.11.100.4 
+
+
+
+
 
 task4: CONFIGURING eigrp FOR ALL switches,cms
        and OSPF for edge cisco,fortinet,palos:
