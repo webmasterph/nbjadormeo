@@ -13,6 +13,33 @@ Task1: 5 mins answers:
 	::1/128
 6. ff00:0000:0000:beef:a00a:0aa0:0000:0000/8 = 
 	FF00:0:0:BEEF:A00A:AA0:: /8
+TASK1: IPV6 SUBNETTING FOR FUTURE NETWORK ENGINEERS:
+ex1: subnet FACE:FACE:CAFE:CARE::/64 into 1500 offices:
+CAT dali naman:
+Covert 1500 is bits =11b
+Add to orig /64 + /11 =/75
+I-fingerMO:
+ 
+      @edge::
+config t
+ipv6 unicast-routing
+int loopback 1
+ipv6 address dada:dada:baba:baba::1/73
+int loopback 2
+ipv6 address dada:dada:baba:baba:0080::1/73
+int loopback 3
+ipv6 address dada:dada:baba:baba:0100::1/73
+int loopback 4
+ipv6 address dada:dada:baba:baba:0180::1/73
+int loopback 5
+ipv6 address dada:dada:baba:baba:0200::1/73
+int loopback 6
+ipv6 address dada:dada:baba:baba:0280::1/73
+int loopback 7
+ipv6 address dada:dada:baba:baba:0300::1/73
+end
+show ipv6 int brief
+
 
 TASK2: CONFIGURING IPV6 ON CISCO DEVICES:
 method1: Ipv6 autoconfig/autoBwisit
@@ -192,7 +219,7 @@ TASK6: HOW TO GET FIRED IMMEDIATELY!
 config t
 NO spanning-tree vlan 1-999
 end
-@taas:
+@taas: How to get hired again:
 config t
 spanning-tree vlan 1-999
 end
@@ -209,7 +236,7 @@ WonderWoman: 802.1w: rapidSTP
 SuperMan: 802.1s: MiSTP
 "Protect Many Switches at the same time!"
 
-TASK8: ACCESS PORTS VS TRUNK PORTS:
+TASK8: ACCESS PORTS VS TRUNK PORTS: 802.1Q cUPID;make switch
 Trunk Ports: switch to switch:
 TAAS/BABA:
 config t
@@ -218,6 +245,8 @@ Int Range fa0/10-12
  no shutdown
  switchport trunk Encap Dot1Q
  switchport mode trunk
+ do sh int trunk
+ switchport trunk allowed vlan 1-100
  do sh int trunk
 Dot1q = Qupid,mave switches love each other:
       IEEE standard where SW will from Layer 2 trunks
@@ -259,7 +288,7 @@ kabit PC = 30s
 putol trunk, recover =30s, acceptable? BANK,HOst,Pol,Mil
 
 TASK10: Rapid Spanning-tree Protocol: 802.1w
-TAAs/BABA: tikam si wonderWoman
+TAAs/BABA: tikman si wonderWoman
 config t
 spanning-tree Mode Rapid-pvst
 do sh spanning-tree vlan 1
@@ -317,6 +346,8 @@ step2:
 create vlans:
 TAAS:/D1
 config t
+vlan 2
+name SAMPLEITO
 vlan 11-19
 exit
 vlan 21-29
@@ -357,7 +388,7 @@ spanning-tree mst 2 root Secondary
 spanning-tree mst 3 root primary
 
 TASK15: Implementing Port-Security in Cisco/bawal Nakaw/bawalPalit.
-Switch:
+Switch: Bawal palitan nang mas mura
 baba:
 sh cdp nei
 Port-Security: Secure/Guard the MacAddress/Layer2
@@ -412,7 +443,7 @@ config t
 hostname PLDTITO
 Track 1 Int gi 0/1 line-protocol
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.11.1.6
 standby 1 preempt
 standby 1 Priority 150
 standby 1 Track 1 decrement 60
@@ -430,7 +461,7 @@ COREBABA/GLOBE:
 config t
 hostname GLOBEITO
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.11.1.6
 standby 1 preempt
 standby 1 Priority 100
 
@@ -448,7 +479,7 @@ config t
 Track 1 Int e1/0 line-protocol
 Int vlan 10
 no standby 10
-VRRP 10 ip 10.2.1.3
+ 10 ip 10.2.1.3
 VRRP 10 preempt
 VRRP 10 Priority 150
 VRRP 10 Track 1 decrement 60
